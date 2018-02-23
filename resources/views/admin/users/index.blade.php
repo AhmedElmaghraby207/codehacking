@@ -3,9 +3,6 @@
 
 @section('content')
 
-    @if(Session::has('deleted_user'))
-        <p class="bg-danger text-center">{{session('deleted_user')}}</p>
-    @endif
 
     @if(Session::has('created_user'))
         <p class="bg-success text-center">{{session('created_user')}}</p>
@@ -13,6 +10,10 @@
 
     @if(Session::has('updated_user'))
         <p class="bg-info text-center">{{session('updated_user')}}</p>
+    @endif
+
+    @if(Session::has('deleted_user'))
+        <p class="bg-danger text-center">{{session('deleted_user')}}</p>
     @endif
 
     <h1>Users</h1>
