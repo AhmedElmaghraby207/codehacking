@@ -160,4 +160,14 @@ class AdminPostsController extends Controller
         return redirect('/admin/posts');
 
     }
+
+
+    public function post($id)
+    {
+        $post = Poost::findOrFail($id);
+
+        return view('post', compact('post'));
+    }
+
+
 }
