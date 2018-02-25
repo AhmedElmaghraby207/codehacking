@@ -58,6 +58,7 @@ class AdminUsersController extends Controller
         }
 
         $input['password'] = bcrypt($request->password);
+
         User::create($input);
 
         Session::flash('created_user', 'The user has been created');
