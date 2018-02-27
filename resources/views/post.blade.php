@@ -33,6 +33,12 @@
     <hr>
 
 
+
+
+    @if(Session::has('comment_added'))
+        <p class="bg-success text-center">{{session('comment_added')}}</p>
+    @endif
+
     <!-- Blog Comments -->
 
         <!-- Comments Form -->
