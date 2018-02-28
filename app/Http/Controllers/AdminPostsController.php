@@ -23,7 +23,7 @@ class AdminPostsController extends Controller
     {
         //
 
-        $posts = Poost::all();
+        $posts = Poost::paginate(3);
 
         return view('admin.posts.index', compact('posts'));
     }
@@ -155,7 +155,6 @@ class AdminPostsController extends Controller
         $post->delete();
 
         Session::flash('deleted_post', 'The post has been deleted');
-
 
         return redirect('/admin/posts');
 

@@ -14,16 +14,12 @@ use Illuminate\Support\Facades\Session;
 
 class AdminUsersController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function index()
     {
         //
 
-        $users = User::all();
+        $users = User::paginate(3);
 
         return view('admin.users.index', compact('users'));
     }
