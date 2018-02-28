@@ -42,7 +42,7 @@
             {!! Form::open(['method'=>'DELETE', 'action'=>['AdminPostsController@destroy', $post->id]]) !!}
             {{csrf_field()}}
             <div class="form-group">
-                {!! Form::submit('Delete User', ['class'=>'btn btn-danger col-sm-5 pull-right']) !!}
+                {!! Form::submit('Delete Post', ['class'=>'btn btn-danger col-sm-5 pull-right']) !!}
             </div>
             {!! Form::close() !!}
 
