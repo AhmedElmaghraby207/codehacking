@@ -352,7 +352,7 @@
 
 <script src="{{asset('js/dropzone.min.js')}}"></script>
 
-
+@yield('scripts')
 @yield('footer')
 
 

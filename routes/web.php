@@ -11,11 +11,14 @@
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
 
 Route::auth();
+
+Route::get('/home', 'HomeController@index');
 
 Route::get('/logout', 'Auth\LoginController@logout');
 
@@ -68,6 +71,7 @@ Route::group(['middleware'=>'admin'], function (){
         'destroy'=>'admin.medias.destroy',
 
     ]]);
+    Route::delete('admin/delete/medias', 'AdminMediasController@deleteMedia');
 
     Route::resource('/admin/comments', 'PostCommentsController', ['names'=>[
 

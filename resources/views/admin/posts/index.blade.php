@@ -3,6 +3,8 @@
 
 @section('content')
 
+{{--  @include('includes.tinyeditor')  --}}
+
     @if(Session::has('deleted_post'))
         <p class="bg-danger text-center">{{session('deleted_post')}}</p>
     @endif
