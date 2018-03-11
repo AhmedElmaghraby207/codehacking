@@ -12,10 +12,11 @@
     <title>Admin</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="{{asset('css/app.css')}}" rel="stylesheet">
-
+    
     <link href="{{asset('css/libs.css')}}" rel="stylesheet">
 
+    <link href="{{asset('css/app.css')}}" rel="stylesheet">
+    
     <link href="{{asset('css/dropzone.min.css')}}" rel="stylesheet">
 
 
@@ -352,7 +353,7 @@
 
 <script src="{{asset('js/dropzone.min.js')}}"></script>
 
-
+@yield('scripts')
 @yield('footer')
 
 
